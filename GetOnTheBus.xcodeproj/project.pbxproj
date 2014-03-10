@@ -24,6 +24,9 @@
 		D158EAA9188F0F660049C4C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D158EAA8188F0F660049C4C2 /* MapKit.framework */; };
 		D158EAAC188F1DB70049C4C2 /* RouteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D158EAAB188F1DB70049C4C2 /* RouteDetailsViewController.m */; };
 		D158EAB0188F2A460049C4C2 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D158EAAF188F2A460049C4C2 /* AddressBookUI.framework */; };
+		D158EAB3188FE4D20049C4C2 /* NewPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D158EAB2188FE4D20049C4C2 /* NewPointAnnotation.m */; };
+		D158EAB6188FE6C00049C4C2 /* NewAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D158EAB5188FE6C00049C4C2 /* NewAnnotationView.m */; };
+		D158EABA188FFBED0049C4C2 /* metralogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D158EAB9188FFBED0049C4C2 /* metralogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,11 @@
 		D158EAAB188F1DB70049C4C2 /* RouteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailsViewController.m; sourceTree = "<group>"; };
 		D158EAAD188F29F70049C4C2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D158EAAF188F2A460049C4C2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D158EAB1188FE4D20049C4C2 /* NewPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPointAnnotation.h; sourceTree = "<group>"; };
+		D158EAB2188FE4D20049C4C2 /* NewPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPointAnnotation.m; sourceTree = "<group>"; };
+		D158EAB4188FE6C00049C4C2 /* NewAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAnnotationView.h; sourceTree = "<group>"; };
+		D158EAB5188FE6C00049C4C2 /* NewAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAnnotationView.m; sourceTree = "<group>"; };
+		D158EAB9188FFBED0049C4C2 /* metralogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metralogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,11 @@
 				D158EA85188F06700049C4C2 /* Main.storyboard */,
 				D158EA88188F06700049C4C2 /* ViewController.h */,
 				D158EA89188F06700049C4C2 /* ViewController.m */,
+				D158EAB9188FFBED0049C4C2 /* metralogo.png */,
+				D158EAB4188FE6C00049C4C2 /* NewAnnotationView.h */,
+				D158EAB5188FE6C00049C4C2 /* NewAnnotationView.m */,
+				D158EAB1188FE4D20049C4C2 /* NewPointAnnotation.h */,
+				D158EAB2188FE4D20049C4C2 /* NewPointAnnotation.m */,
 				D158EAAA188F1DB70049C4C2 /* RouteDetailsViewController.h */,
 				D158EAAB188F1DB70049C4C2 /* RouteDetailsViewController.m */,
 				D158EA8B188F06700049C4C2 /* Images.xcassets */,
@@ -245,6 +258,7 @@
 			files = (
 				D158EA8C188F06700049C4C2 /* Images.xcassets in Resources */,
 				D158EA7E188F06700049C4C2 /* InfoPlist.strings in Resources */,
+				D158EABA188FFBED0049C4C2 /* metralogo.png in Resources */,
 				D158EA87188F06700049C4C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,8 +279,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D158EA8A188F06700049C4C2 /* ViewController.m in Sources */,
+				D158EAB3188FE4D20049C4C2 /* NewPointAnnotation.m in Sources */,
 				D158EA84188F06700049C4C2 /* AppDelegate.m in Sources */,
 				D158EA80188F06700049C4C2 /* main.m in Sources */,
+				D158EAB6188FE6C00049C4C2 /* NewAnnotationView.m in Sources */,
 				D158EAAC188F1DB70049C4C2 /* RouteDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +492,7 @@
 				D158EAA4188F06700049C4C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D158EAA5188F06700049C4C2 /* Build configuration list for PBXNativeTarget "GetOnTheBusTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +501,7 @@
 				D158EAA7188F06700049C4C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

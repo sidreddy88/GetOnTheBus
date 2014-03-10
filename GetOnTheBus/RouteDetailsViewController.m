@@ -13,32 +13,47 @@
 
 @interface RouteDetailsViewController ()
 {
-    IBOutlet UITextField *titleLabel;
+  
     
+    IBOutlet UILabel *labelShowingTitle;
    
     IBOutlet UILabel *labelShowingAddress;
     
     
     IBOutlet UILabel *labelShowingBusRoutes;
     
-    id myAddress;
+    
+    IBOutlet UILabel *labelShowingIntermodalTransfers;
    
+    IBOutlet UILabel *labelTitleIntermodalTransfers;
 }
 
 @end
 
 @implementation RouteDetailsViewController
-@synthesize title, address, busRoutes, location;
+@synthesize title, address, busRoutes, location, intermodalTransferRoutes;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	titleLabel.text = title;
+	labelShowingTitle.text = title;
+    labelShowingBusRoutes.text = busRoutes;
+
+    
     
     CLLocation *ll = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
     
     CLGeocoder* geoCoder = [CLGeocoder new];
+    
+    if ([intermodalTransferRoutes isEqualToString:@""]){
+        labelShowingIntermodalTransfers.text = @"No transfers";
+
+    } else {
+        labelTitleIntermodalTransfers.alpha = 1;
+        labelShowingIntermodalTransfers.alpha = 1;
+        labelShowingIntermodalTransfers.text = intermodalTransferRoutes;
+    }
     
 
     [geoCoder reverseGeocodeLocation:ll completionHandler:^(NSArray *placemarks, NSError *error) {
@@ -48,7 +63,8 @@
         } else {
             for (CLPlacemark* placemark in placemarks) {
                 id b = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
-                myAddress = [NSString stringWithFormat:@"%@", b];
+                id myAddress = [NSString stringWithFormat:@"%@", b];
+                labelShowingAddress.text = myAddress;
                 NSLog(@"address = %@", myAddress);
             }
             
@@ -57,8 +73,7 @@
     }];
 
     
-    labelShowingBusRoutes.text = busRoutes;
-    labelShowingAddress.text = myAddress;
+    
     
 }
 

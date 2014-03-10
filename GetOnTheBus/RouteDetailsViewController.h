@@ -14,6 +14,7 @@
 @property NSString *title;
 @property NSString *address;
 @property NSString *busRoutes;
+@property NSString *intermodalTransferRoutes;
 @property CLLocationCoordinate2D location;
 
 @end
